@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Cyan: hsl(179, 62%, 43%);
+  --BrightYellow: hsl(71, 73%, 54%);
+  --LightGray: hsl(204, 43%, 93%);
+  --GrayishBlue: hsl(218, 22%, 67%);
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 15px;
+  /* font-family: "Poppins", sans-serif; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--LightGray);
+}
+
+.container {
+  max-width: 50vw;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "a a" "b c";
+}
+
+.box {
+  padding: 44px;
+}
+
+.box-1 {
+  grid-area: a;
+
+  background-color: white;
+  /* background-color: var(--LightGray); */
+}
+.box-2 {
+  grid-area: b;
+  background-color: var(--Cyan);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.box-3 {
+  grid-area: c;
+  background-color: rgb(104, 199, 199);
+}
+
+.box-1 h1 {
+  color: var(--Cyan);
+  padding: 2px;
+  margin-bottom: 9px;
+}
+
+.box-1 h2 {
+  color: var(--BrightYellow);
+  padding: 2px;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.box-1 p {
+  color: var(--GrayishBlue);
+  padding: 2px;
+  /* margin-bottom: 4px; */
+}
+
+.box-2 p {
+  color: #fff;
+  font-family: "Karla", sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.box-2 span {
+  color: var(--LightGray);
+  font-size: 15px;
+}
+
+.info {
+  color: var(--LightGray);
+  font-family: "Karla", sans-serif;
+  font-size: 13px;
+  margin-bottom: 24px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4vh;
+  width: auto;
+  background-color: var(--BrightYellow);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.btn a {
+  text-decoration: none;
+  color: var(--LightGray);
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+}
+
+.box-3 ul {
+  list-style: none;
+  line-height: 1.5;
+}
+
+.box-3 li {
+  color: var(--LightGray);
+  font-size: 12px;
+}
+
+h6 {
+  color: var(--LightGray);
+  font-weight: 700;
+  font-size: 16px;
+  padding: 2px;
+  margin-bottom: 9px;
+}
+
+@media screen and (min-width: 400px) and (max-width: 1020px) {
+  .wrapper {
+    grid-template-columns: 100%;
+    grid-template-areas: "a" "b" "c";
+  }
+
+  .box {
+    padding: 40px;
+  }
+
+  .container {
+    max-width: 65vw;
+  }
+
+  .box-1 p {
+    line-height: 1.5;
+  }
+
+  .box-1 h1 {
+    font-size: 25px;
+  }
+}
